@@ -325,6 +325,8 @@ registerMicroApps([
 
 - 子应用重定向、清空本地存储
 
+### 8. [父子项目间的组件共享](https://juejin.cn/post/6856569463950639117#heading-26)
+
 
 ## 应用通信
 
