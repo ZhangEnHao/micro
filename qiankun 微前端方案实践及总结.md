@@ -143,13 +143,14 @@ Vue.config.productionTip = false
 let router = null;
 let instance = null;
 function render(parent = {}) {
-  const router = new VueRouter({
+  // 在 render 中创建 VueRouter，可以保证在卸载微应用时，移除 location 事件监听，防止事件污染
+  router = new VueRouter({
     // histroy模式的路由需要设置base，sub路由根据项目名称来定
     base: window.__POWERED_BY_QIANKUN__ ? '/sub' : '/',
     mode: 'history',
     // hash模式不需要上面两行
     routes: []
-  })
+  });
   instance = new Vue({
     router,
     store,
@@ -590,6 +591,8 @@ export default {
 - [基于 qiankun 的微前端最佳实践（图文并茂） - 应用间通信篇](https://juejin.cn/post/6844904151231496200)
 
 - [基于 qiankun 的微前端最佳实践（图文并茂） - 应用部署篇 | 🏆 技术专题第四期征文](https://juejin.cn/post/6875814605500153863)
+
+- [微前端 qiankun 从搭建到部署的实践](https://xie.infoq.cn/article/b42eb5baa89d57860cc58acf9)
 
 ---
 
