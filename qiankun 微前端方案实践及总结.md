@@ -328,6 +328,8 @@ registerMicroApps([
 
 ### 8. [父子项目间的组件共享](https://juejin.cn/post/6856569463950639117#heading-26)
 
+### 9. ``` src/router/index.js ``` 改为只暴露 ``` routes ```，``` new Router ```改到``` main.js ```中的 ``` render ``` 函数声明。
+
 
 ## 应用通信
 
