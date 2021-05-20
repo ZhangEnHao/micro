@@ -1,4 +1,4 @@
-## qiankun
+## qiankun 简介
 
 ```qiankun``` 蚂蚁金服基于 ```single-spa``` 的微前端解决方案，生产可用。
 
@@ -32,7 +32,6 @@ $ yarn add qiankun # 或者 npm i qiankun -S
 
 ```javaScript
 // micro/apps.js
-import app from "./shared";  //分享给子应用的数据
 
 /*
  * name: 微应用名称 - 具有唯一性，为了减轻配置的复杂度，尽量保持与微应用的项目名、activeRule 保持一致
@@ -44,11 +43,10 @@ import app from "./shared";  //分享给子应用的数据
 
 const apps = [
   {
-    name: "vue-project",
-    entry: "//localhost:10300",
-    container: "#app-qiankun",
-    activeRule: "/vue",
-    props: { app }
+    name: "sub-project",
+    entry: "//127.0.0.1:7001",
+    container: "#micro-main-frame",
+    activeRule: "/sub",
   }
 ];
 
@@ -95,7 +93,7 @@ export default function (apps: []) {
 ### 3. 主应用为子应用准备展示节点元素
 
 ```html
-<div id="subView"/>
+<div id="micro-main-frame"/>
 ```
 
 ### 4. 启动微应用
@@ -128,7 +126,7 @@ if (window.__POWERED_BY_QIANKUN__) {
 }
 ```
 
-### 2. 修改 ```index.html``` 中项目初始化的容器，不要都使用 ```#app``` ，避免与其他的项目冲突，建议换成项目 ```name``` 的驼峰写法。
+### 2. 注意：若基座挂载在 ```#app``` 上， 需修改子应用 ```index.html``` 中项目初始化的容器，不要都使用 ```#app``` ，避免与其他的项目冲突，建议换成项目 ```name``` 的驼峰写法。
 
 ### 3. 改造 ```main.js```，引入上面的 ```public-path.js```，改写```render```，添加生命周期函数等
 
@@ -202,7 +200,6 @@ export async function unmount() {
 
   - **路由文件需要 ```export``` 路由数据，而不是实例化的路由对象，路由的钩子函数也需要移到入口文件。**
 
-  - 在 ``mount`` 生命周期，可以拿到父项目传递过来的数据，```router``` 用于跳转到主项目/其他子项目的路由，```store``` 是父项目的实例化的 ```Vuex```。
 
 ### 4. 修改打包配置 ```vue.config.js```
 
@@ -330,7 +327,15 @@ registerMicroApps([
 
 ### 8. [父子项目间的组件共享](https://juejin.cn/post/6856569463950639117#heading-26)
 
-### 9. ``` src/router/index.js ``` 改为只暴露 ``` routes ```，``` new Router ```改到``` main.js ```中的 ``` render ``` 函数声明。
+### 9. 基座应用子页面中渲染子应用某页面
+
+修改微应用触发的路由规则函数
+
+```javaScript
+const getActiveRule = hash => location => new RegExp(hash).test(location.hash);
+```
+
+路由 ``` 127.0.0.1/#/home/sub/about ``` 中 ``` home ``` 表示基座应用子页面，``` sub ```表示子应用，``` about ``` 表示子应用的某路由页。
 
 
 ## 应用通信
