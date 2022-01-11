@@ -1,4 +1,3 @@
-const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const resolve = dir => {
@@ -56,10 +55,6 @@ module.exports = {
   },
   configureWebpack: {
     plugins: [
-      new webpack.ProvidePlugin({
-        jQuery: "jquery",
-        $: "jquery"
-      }),
       new CopyWebpackPlugin([
         {
           from: path.resolve(__dirname, "src/assets"),

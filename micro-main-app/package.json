@@ -14,7 +14,6 @@
     "@logicflow/extension": "^0.5.0",
     "core-js": "2.6.5",
     "iview": "3.4.0",
-    "jquery": "3.3.1",
     "qiankun": "^2.4.0",
     "vue": "2.6.6",
     "vue-calendar-component": "2.8.2",
