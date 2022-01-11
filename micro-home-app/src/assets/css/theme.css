@@ -1,0 +1,145 @@
+/* Page */
+.ivu-page-item:hover {
+    border-color: #007f8e;
+}
+.ivu-page-item-active {
+    background-color: #5A8AFF;
+    border-color: #5A8AFF;
+    color:#fff;
+}
+/* Button */
+.ivu-btn-primary:hover {
+    color: #fff;
+}
+.ivu-btn-primary:hover {
+    color: #fff;
+    background-color: #3B77E3;
+    border-color: #3B77E3;
+}
+
+.ivu-btn-primary {
+    color: #fff;
+    background-color: #5A8AFF;
+    border-color: #3B77E3;
+    box-shadow: 0 1px 2px 0 rgba(0,138,92,.24);
+}
+.ivu-btn-ghost:hover {
+    color: #5A8AFF;
+    background-color: transparent;
+    border-color: #5A8AFF;
+}
+.navbar-default .nav > li > a:focus{
+    background-color: #5A8AFF;
+    color: #fff;
+}
+a{color:inherit;}
+/* Table */
+.ivu-table th {
+    background-color: #f6f8ff;
+}
+.ivu-table-wrapper {
+    position: relative;
+    border: 1px solid #f6f8ff;
+    border-bottom: 0;
+    border-right: 0;
+}
+th .ivu-table-cell {
+    white-space: nowrap;
+}
+/* Checkbox */
+.ivu-checkbox-checked .ivu-checkbox-inner {
+    border-color: #5A8AFF;
+    background-color: #5A8AFF;
+}
+.ivu-steps .ivu-steps-head {
+    background: #F2F2F2;
+}
+/* radio-group */
+.ivu-radio-group-button .ivu-radio-wrapper{border-radius: 3px;margin-right:10px;margin-bottom:10px;text-align:center;border: 1px solid #dddee1;}
+.ivu-radio-group-button .ivu-radio-wrapper:first-child,.ivu-radio-group-button .ivu-radio-wrapper:last-child {
+    border-radius: 3px;
+    border: 1px solid #dddee1;
+}
+.ivu-radio-group-button .ivu-radio-wrapper-checked {
+    border-color: #5A8AFF;
+    /*box-shadow: -1px 0 0 0 #5A8AFF;*/
+   box-shadow:none;
+    color: #fff;
+    background-color: #5A8AFF;
+}
+.ivu-radio-group-button .ivu-radio-wrapper:hover {
+    color: #3B77E3;
+     border-color: #3B77E3;
+}
+.ivu-radio-group-button .ivu-radio-wrapper-checked:hover{color:#fff;background-color: #3B77E3;}
+/* ivew icon color */
+.ivu-steps-item.ivu-steps-custom.ivu-steps-status-process .ivu-steps-head-inner > .ivu-steps-icon {
+    color: #5A8AFF;
+}
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner span, .ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner > .ivu-steps-icon {
+    color: #5A8AFF;
+}
+.ivu-steps .ivu-steps-tail > i {
+    width: 100%;
+}
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-tail > i::after {
+    width: 100%;
+    background: #5A8AFF;
+     margin-left: 78px;
+}
+ul{
+	margin-bottom: 0rem;
+}
+.ivu-menu-dark{
+	background: #22222C;
+}
+.ivu-page-next:hover, .ivu-page-prev:hover {
+    border-color: #5A8AFF;
+}
+.ivu-radio-group-button .ivu-radio-wrapper-checked.ivu-radio-focus {
+	box-shadow: -1px 0 0 0 #5A8AFF, 0 0 0 2px rgba(167, 30, 50, .2);
+	box-shadow:none;
+	border:none;
+}
+
+.ivu-radio-group-button .ivu-radio-wrapper-checked.ivu-radio-focus:after {
+	background: rgba(167, 30, 50, .2);
+	background: none;
+}
+
+.ivu-radio-group-button .ivu-radio-wrapper-checked.ivu-radio-focus:first-child {
+	/*box-shadow: 0 0 0 2px rgba(167, 30, 50, .2)*/
+	box-shadow: none;
+}
+.ivu-tabs-nav .ivu-tabs-tab-active {
+	color: #5A8AFF
+}
+.ivu-tabs-ink-bar {
+	background-color: #5A8AFF;
+}
+.ivu-tabs-nav .ivu-tabs-tab:hover {
+	color: #3B77E3
+}
+.ivu-btn-error {
+    color: #fff;
+    background-color: #ff7f5b;
+    border-color: #f26d48;
+}
+.ivu-btn-error:hover {
+    background-color: #f26d48;
+    border-color: #f26d48;
+}
+.ivu-btn-primary:focus {
+	box-shadow: 0 0 0 2px rgba(90, 138, 255, .2)
+}
+/*.builProject-slider .ivu-layout-sider-children .router-link-active span{background:transparent}
+.builProject-slider .ivu-layout-sider-children .router-link-active span{color:#fff}*/
+.builProject-slider .ivu-menu-dark{background: #343b4a;}
+.builProject-slider .slider-title{background:#fff;border-right:1px solid #dcdee2}
+.builProject-slider .ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu), .ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):hover, .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu), .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu):hover {
+    background: linear-gradient(to right,#0078bc 1%,#00aac1 100%);
+}
+.builProject-slider .ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active.ivu-menu-item-selected span{color:#fff}
+.builProject-slider .ivu-menu-light{background:#fff url(../img/shape.png) no-repeat left center; background-size: auto; }
+.ivu-form-item-content a.link-text,.ivu-table-cell span.link-text{color:#5A8AFF; cursor: pointer;}
+.ivu-form-item-content a.link-text:hover,.ivu-table-cell span.link-text:hover{color:#5A8AFF;text-decoration: underline;}

@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": 50,
+      "type": "StartNoneEvent",
+      "x": 100,
+      "y": 150,
+      "text": "你好"
+    },
+    {
+      "id": 21,
+      "type": "end",
+      "x": 300,
+      "y": 150
+    }
+  ],
+  "edges": [
+    {
+      "type": "polyline",
+      "sourceNodeId": 50,
+      "targetNodeId": 21
+    }
+  ]
+}
